@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en" id="home">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <title>Evnt</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link href="style/main.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <nav
+      class="navbar navbar-expand-lg navbar-dark navbar-event fixed-top navbar-fixed-top"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="#">Evnt</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Event</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Category</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Sign In</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link btn btn-signup px-4" href="#">Sign Up</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="page-content page-details">
+      <section class="section-breadcrumbs">
+        <div class="container">
+          <div class="row" data-aos="fade-down" data-aos-duration="1000">
+            <div class="col-12">
+              <nav>
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item">
+                    <a href="/index.html">Home</a>
+                  </li>
+
+                  <li class="breadcrumb-item active">Event Details</li>
+                </ol>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="event-gallery" id="gallery">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8" data-aos="zoom-in">
+              <transition name="slide-fade" mode="out-in">
+                <img
+                  :src="photos[activePhoto].url"
+                  :key="photos[activePhoto].id"
+                  class="w-100 main-image"
+                  alt=""
+                />
+              </transition>
+            </div>
+            <div class="col-lg-2">
+              <div class="row">
+                <div
+                  class="col-3 col-lg-12 mt-2 mt-lg-0"
+                  v-for="(photo, index) in photos"
+                  :key="photo.id"
+                  data-aos="zoom-in"
+                  data-aos-delay="100"
+                >
+                  <a href="#" @click="changeActive(index)">
+                    <img
+                      :src="photo.url"
+                      class="w-100 thumbnail-image"
+                      :class="{ active: index == activePhoto }"
+                      alt=""
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-information">
+        <div class="container">
+          <div class="row" data-aos="fade-up" data-aos-duration="2000">
+            <div class="col-lg-8">
+              <div class="title-event">
+                <h2>Indonesia Food Diary</h2>
+              </div>
+              <div class="owner-event">By, PT Indo Nusa Persada</div>
+              <div class="price">Rp200.000</div>
+              <div class="description">
+                <p>
+                  Contrary to popular belief, Lorem Ipsum is not simply roots in
+                  a piece of classical Latin literature from 45 BC, making it
+                  over years old. Richard McClintock, a Latin professor at
+                  Hampden College in Virginia, looked up one of the more obscure
+                  Latin
+                </p>
+
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                </p>
+              </div>
+            </div>
+
+            <div class="col-lg-4 align-self-center event-information">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="text-center mb-4">Event Information</h4>
+                  <div class="border-top"></div>
+                  <div class="item-information d-flex justify-content-between">
+                    <div class="date">Date</div>
+                    <div class="">20 OKT 2020</div>
+                  </div>
+                  <div class="item-information d-flex justify-content-between">
+                    <div class="date">Time Start</div>
+                    <div class="">08.00 A.M</div>
+                  </div>
+                  <div class="item-information d-flex justify-content-between">
+                    <div class="type">Event Type</div>
+                    <div class="">Premium</div>
+                  </div>
+                  <div class="item-information d-flex justify-content-between">
+                    <div class="type">Price</div>
+                    <div class="">Rp200.000</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-location">
+        <div class="container">
+          <div class="row" data-aos="fade-up" data-aos-duration="2000">
+            <div class="col-lg-12">
+              <h2 class="mb-4 mt-2">Location Event</h2>
+              <div class="embed-responsive embed-responsive-16by9">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.7912227718225!2d106.80950214876135!3d-6.158710195519153!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f6737e84a307%3A0xa26802c9157ebd73!2sEvent%20Organizer!5e0!3m2!1sid!2sid!4v1600315683647!5m2!1sid!2sid"
+                  width="600"
+                  height="450"
+                  frameborder="0"
+                  style="border: 0"
+                  allowfullscreen=""
+                  aria-hidden="false"
+                  tabindex="0"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <div class="container">
+        <hr />
+        <div class="row justify-content-center">
+          <div class="col-12">
+            <div class="row">
+              <div class="col-12 col-lg-3 align-self-center name-footer">
+                <a href="#" class="logo-event">Evnt</a>
+              </div>
+              <div class="col-12 col-lg-3 name-footer">
+                <h4 class="mb-3">Event</h4>
+                <ul class="list-unstyled">
+                  <li>
+                    <a href=""> Join Us </a>
+                  </li>
+                  <li>
+                    <a href=""> Category </a>
+                  </li>
+                  <li>
+                    <a href=""> Features </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-12 col-lg-3 name-footer">
+                <h4 class="mb-3">Support</h4>
+                <ul class="list-unstyled">
+                  <li>
+                    <a href=""> Check Ticket </a>
+                  </li>
+                  <li>
+                    <a href=""> How to buy tickets </a>
+                  </li>
+                  <li>
+                    <a href=""> Become an owner </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-12 col-lg-3 name-footer">
+                <h4 class="mb-3">Contact Us</h4>
+                <ul class="list-unstyled">
+                  <li>
+                    <a href=""> +62 878-8349-6655 </a>
+                  </li>
+                  <li>
+                    <a href=""> event@gmail.com </a>
+                  </li>
+                  <li>
+                    <a href=""> Jakarta Barat, Indonesia </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 text-center">
+          <div class="line"></div>
+          <p>Copyright © 2020 Evnt.com. All rights reversed</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="vendor/vue/vue.js"></script>
+    <script>
+      var gallery = new Vue({
+        el: "#gallery",
+        data: {
+          activePhoto: 0,
+          photos: [
+            {
+              id: 1,
+              url: "images/1.jpg",
+            },
+
+            {
+              id: 2,
+              url: "images/2.jpg",
+            },
+
+            {
+              id: 3,
+              url: "images/3.jpg",
+            },
+
+            {
+              id: 4,
+              url: "images/4.jpg",
+            },
+          ],
+        },
+        methods: {
+          changeActive(id) {
+            this.activePhoto = id;
+          },
+        },
+      });
+    </script>
+    <script src="scripts/main.js"></script>
+  </body>
+</html>
