@@ -11258,6 +11258,7 @@ footer .line {
 .page-details .section-information .card {
   border-radius: 8px;
   border: 0;
+  background-color: #f4f5fa;
   font-family: "Euclid";
 }
 
@@ -11271,6 +11272,46 @@ footer .line {
   margin-top: 10px;
   color: #806e6e;
   margin-bottom: 10px;
+}
+
+.page-details .section-information .card .btn-add {
+  color: #fff;
+  color: #fff;
+  background-color: #7848f4;
+  border-color: transparent;
+}
+
+.page-details .section-information .card .btn-add:hover {
+  color: #fff;
+  background-color: #5d24f2;
+  border-color: rgba(0, 0, 0, 0);
+}
+
+.page-details .section-information .card .btn-add:focus, .page-details .section-information .card .btn-add.focus {
+  color: #fff;
+  background-color: #5d24f2;
+  border-color: rgba(0, 0, 0, 0);
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.5);
+          box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.5);
+}
+
+.page-details .section-information .card .btn-add.disabled, .page-details .section-information .card .btn-add:disabled {
+  color: #fff;
+  background-color: #7848f4;
+  border-color: transparent;
+}
+
+.page-details .section-information .card .btn-add:not(:disabled):not(.disabled):active, .page-details .section-information .card .btn-add:not(:disabled):not(.disabled).active,
+.show > .page-details .section-information .card .btn-add.dropdown-toggle {
+  color: #fff;
+  background-color: #5518f1;
+  border-color: rgba(0, 0, 0, 0);
+}
+
+.page-details .section-information .card .btn-add:not(:disabled):not(.disabled):active:focus, .page-details .section-information .card .btn-add:not(:disabled):not(.disabled).active:focus,
+.show > .page-details .section-information .card .btn-add.dropdown-toggle:focus {
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.5);
+          box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.5);
 }
 
 .page-details .section-location h2 {
@@ -11471,13 +11512,13 @@ footer .line {
 
 .page-success h2 {
   font-family: "Euclid Medium";
-  font-size: 35px;
+  font-size: 25px;
   color: #0c0435;
 }
 
 .page-success .message p {
   font-family: "Euclid Light";
-  font-size: 18px;
+  font-size: 14px;
   color: #0c0435;
 }
 
